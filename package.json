@@ -1,0 +1,19 @@
+{
+  "name": "hbplus-auth",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,magenta \"npm run dev -w backend\" \"npm run web -w frontend\"",
+    "dev:backend": "npm run dev -w backend",
+    "dev:web": "npm run web -w frontend",
+    "build": "npm run build -w backend && npm run build -w frontend",
+    "test": "npm test -w backend"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "concurrently": "^9.2.1"
+  }
+}
