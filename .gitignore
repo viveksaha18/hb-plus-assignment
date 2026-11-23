@@ -2,7 +2,8 @@ node_modules/
 .expo/
 dist/
 build/
-.env
-.env.local
+# Environment files; keep templates in Git.
+.env*
+!.env*.example
 *.log
 coverage/
